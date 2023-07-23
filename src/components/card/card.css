@@ -1,0 +1,171 @@
+#panel1a-header{
+   background-color: rgb(238, 238, 238);
+}
+.cards{
+    padding: 0 1rem;
+}
+.card{
+    margin: 1rem auto; 
+}
+.cardInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+.cardInfo_image{
+    width: 200px;
+    /* height: 200px; */
+    height: 100%;
+    min-height: 200px;
+    border: 2px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.cardInfo_image img{
+    flex: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.cardInfo_summ{
+    width: 70%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1.5rem;
+}
+.cardInfo_summ .repo_name{
+    font-size: 2.2rem;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.cardInfo_summ .repo_des{
+    font-size: 1.2rem;
+    color: rgb(87, 87, 87);
+}
+.cardInfo_more_summ{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.cardInfo_more_summ_icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.cardInfo_more_summ div:not(:last-child){
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+
+
+.cardInfo_details_tabs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cardInfo_details_tabs h3,h3{    
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.last_push_time{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+}
+.ownername{
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+    text-decoration: underline;
+}
+.linechart{
+    margin: auto;
+}
+.truncate {
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+@media only screen and (max-Width : 775px){
+    .cardInfo{
+        gap: 10px;
+    }
+    .cardInfo_image{
+        width: 150px;
+        height: 100%;
+        min-height: 150px;
+    }
+    .cardInfo_summ{
+        margin-left: 0;
+    }
+    .cardInfo_summ .repo_name{
+        font-size: 1.2rem;
+    }
+    
+    .cardInfo_summ .repo_des{
+        font-size: .8rem;
+    }
+    .cardInfo_more_summ div:not(:last-child){
+        border-radius: 5px;
+        padding: .5rem 1rem;
+    }
+}
+@media only screen and (max-Width : 600px){
+    .cards{
+        padding: 0 .2rem;
+    }
+    .cardInfo_summ{
+        gap: 10px;
+    }
+    .cardInfo_more_summ{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-Width : 426px){
+    .cards{
+        padding: .5rem;
+    }
+    .cardInfo{
+        gap: 20px;
+    }
+    .cardInfo_image{
+        width: 100px;
+        height: 100%;
+        min-height: 100px;
+    }
+    .cardInfo_summ .repo_name{
+        font-size: 1rem;
+    }
+    
+    .cardInfo_summ .repo_des{
+        font-size: .8rem;
+        display: -webkit-box;
+        max-width: 150px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .cardInfo_more_summ div:not(:last-child){
+        border-radius: 5px;
+        padding: .2rem .5rem;
+    }
+    .cardInfo_more_summ_last_push{
+        font-size: .8rem;
+    }
+}
